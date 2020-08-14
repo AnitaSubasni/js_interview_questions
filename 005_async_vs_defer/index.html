@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- elements -->
+
+        <!-- Normal case -->
+        <script type="text/javascript" src="./script.js" ></script>
+        HTML Parsing
+        ===================    Script fetch
+                            -----------------   Script execution
+                                              --------------------  HTML parsing resumed
+                                                                  =======================
+
+        <!-- async -->
+        <script type="text/javascript" src="./script.js" async></script>
+        HTML Parsing
+        ====================    
+            script fetch       Script execution
+            ---------------- --------------------  HTML parsing resumed
+                                                 =======================
+
+
+        <!-- defer guarantees the order of execution -->
+        <script type="text/javascript" src="./script.js" defer></script>
+        HTML Parsing
+        ===========================================
+                        Script fetch
+                    ----------------------
+                                                    Scrpt execution
+                                                   ---------------------
+    </body>
+</html>
